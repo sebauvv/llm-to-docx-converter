@@ -38,3 +38,9 @@ variable "url_expiry_seconds" {
   type        = number
   default     = 300
 }
+
+variable "aws_profile" {
+	description = "AWS CLI profile to use"
+	type        = string
+	default     = "Ecomm-Seba"
+}
