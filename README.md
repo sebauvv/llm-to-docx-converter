@@ -2,6 +2,8 @@
 
 Quick project done for personal use and derusting
 
+https://dqzg7nv7yeylw.cloudfront.net/
+
 ## About
 Tool for converting LLM chat outputs (like ChatGPT, Claude, Gemini, etc.) to .docx or HTML format
 
