@@ -1,0 +1,9 @@
+# https://ryqyqdax27.execute-api.us-east-1.amazonaws.com/convert POST. Output format can be either docx or html
+POST https://ryqyqdax27.execute-api.us-east-1.amazonaws.com/convert
+content-type: application/json
+
+{
+    "content": "# Hello World\n\nThis is **bold** and *italic*.",
+    "output_format": "docx"
+}
+

@@ -1,0 +1,34 @@
+import React from 'react';
+import { FileText, Moon, Sun } from 'lucide-react';
+
+interface HeaderProps {
+  darkMode: boolean;
+  onToggleDarkMode: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ darkMode, onToggleDarkMode }) => {
+  return (
+    <header className="text-center mb-8">
+      <div className="flex items-center justify-center gap-3 mb-2">
+        <FileText className={`w-10 h-10 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+        <h1 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          LLM Chat to DOCX Converter
+        </h1>
+        <button
+          onClick={onToggleDarkMode}
+          className={`ml-4 p-2 rounded-lg transition-all ${
+            darkMode 
+              ? 'bg-slate-700 hover:bg-slate-600 text-yellow-300' 
+              : 'bg-white hover:bg-gray-100 text-gray-700 shadow-md'
+          }`}
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+        </button>
+      </div>
+      <p className={darkMode ? 'text-blue-200' : 'text-gray-700'}>
+        Convert ChatGPT, Claude, Gemini or Grok chat output to Word or HTML instantly
+      </p>
+    </header>
+  );
+};

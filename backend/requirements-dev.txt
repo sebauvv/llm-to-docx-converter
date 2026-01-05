@@ -1,0 +1,26 @@
+# ==========================================
+# DESARROLLO - Dependencias para testing y desarrollo local
+# ==========================================
+
+# Incluir dependencias de producción
+-r requirements.txt
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+
+# Mock de AWS
+moto[s3]==4.2.9
+
+# Linting y formato
+black==23.12.1
+flake8==6.1.0
+pylint==3.0.3
+mypy==1.7.1
+
+# Type hints
+types-boto3==1.0.2
+
+# Desarrollo local
+python-dotenv==1.0.0
